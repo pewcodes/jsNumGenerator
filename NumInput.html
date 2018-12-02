@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<script>
+		window.onload = function () {
+			// alert("O.K. This loads.");
+			var textInput = document.getElementById("tf_input");
+			var buttonElem = document.getElementById("btn_alert");
+			buttonElem.onclick = function () {
+				// alert(textInput.value);
+				// textInput.value = "Text";
+				textInput.value = Math.floor(Math.random() * 10000);
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<input type="text" id="tf_input">
+	<button id="btn_alert">Generate!</button>
+</body>
+
+</html>
