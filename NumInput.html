@@ -1,21 +1,46 @@
 <html>
-
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Bungee|Bungee+Hairline" rel="stylesheet">
+	<style>
+		h1 {
+			font-family: 'Bungee', cursive;
+		}
+
+		[type="text"] {
+			font-family: 'Bungee', cursive;
+			font-size: 16px;
+		}
+
+		.four {
+			color: #ffcc00;
+		}
+
+		#btn_alert {
+			font-family: 'Bungee', cursive;
+			font-size: 16px;
+			background-color: #ffcc00;
+		}
+	</style>
+
 	<script>
 		window.onload = function () {
 			// alert("O.K. This loads.");
 			var textInput = document.getElementById("tf_input");
 			var buttonElem = document.getElementById("btn_alert");
 			buttonElem.onclick = function () {
-				// alert(textInput.value);
-				// textInput.value = "Text";
 				textInput.value = Math.floor(Math.random() * 10000);
-			};
-		};
+				if (textInput.value <= 999) {
+					textInput.value = ("000" + textInput.value).slice(-4);
+				}
+			}
+		}
 	</script>
 </head>
 
 <body>
+	<h1>
+		Generate <span class = "four">4</span> You
+	</h1>
 	<input type="text" id="tf_input">
 	<button id="btn_alert">Generate!</button>
 </body>
